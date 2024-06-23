@@ -28,7 +28,7 @@ const createChatAgent = () => {
         return "I'm sorry, I don't understand!"
    }
 
-    const tellJoke = async () => {
+    const tellJoke = async (promptData) => {
         const res = await fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`)
         const jokeData = await res.json();
         jokeNum += 1;
